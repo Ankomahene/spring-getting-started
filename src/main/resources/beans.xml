@@ -3,6 +3,14 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="humanBean" class = "io.turntabl.springgettingstarted.HumanBean">
+        <property name="FName" value="Shadrack"/>
+        <property name="LName" value="Ankomahene"/>
+        <property name="BestFriend" ref="bestFriend"/>
+    </bean>
 
-
+    <bean id="bestFriend" class="io.turntabl.springgettingstarted.HumanBean">
+        <property name="FName" value="Maxwell"/>
+        <property name="LName" value="Kwanning"/>
+    </bean>
 </beans>
